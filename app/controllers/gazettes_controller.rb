@@ -1,0 +1,2 @@
+class GazettesController < ApplicationController
+end

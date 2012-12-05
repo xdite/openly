@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121205165937) do
+ActiveRecord::Schema.define(:version => 20121205182126) do
 
   create_table "committees", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(:version => 20121205165937) do
   create_table "elections", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "gazettes", :force => true do |t|
+    t.text     "content",    :limit => 2147483647
+    t.integer  "ly_id"
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
   end
 
   create_table "parties", :force => true do |t|

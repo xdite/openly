@@ -1,0 +1,2 @@
+module GazettesHelper
+end
