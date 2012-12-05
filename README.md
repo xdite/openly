@@ -2,6 +2,7 @@
 
 1. `rake dev:build` # It will import all committees data from doc/committee_raw, 
 
+![img](https://s3.amazonaws.com/files.droplr.com/files_production/acc_42891/lLfq?AWSAccessKeyId=AKIAJSVQN3Z4K7MT5U2A&Expires=1354732710&Signature=V4znGuaBx1i%2BMr3PuLLO1vTkB4A%3D&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27Screenshot%2B2012-12-06%2Bat%2B01.35.35.png)
 
 ### Style Guides
 
