@@ -1,0 +1,13 @@
+
+<div class="span12">
+  <div class="box">
+    <ul>
+
+      <%= content_tag_for(:li, @elections) do |election| %>
+        <%= link_to("第 #{election.id} 屆立法委員", election_path(election)) %>
+      <% end %>
+
+    </ul>
+
+  </div>
+</div>

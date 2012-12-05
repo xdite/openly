@@ -9,3 +9,20 @@ ul.nav li.dropdown:hover .dropdown-menu{
 .navbar .dropdown-menu {
  margin-top: 0px;
 }
+
+.navbar .dropdown-menu,
+.nav .dropdown-menu {
+ margin-top: 0px;
+}
+
+
+.group:before, .group:after {
+   content: "";
+   display: table;
+}
+.group:after {
+   clear: both;
+}
+.group {
+   zoom: 1; /* IE6&7 */
+}

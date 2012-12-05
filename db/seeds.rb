@@ -28,10 +28,11 @@ def build_from_json(raw_data, election_id)
   end
 end
 
-for i in 2..8
-  json = JSON.parse(IO.read("doc/committee_raw/#{i}.json"))
-  build_from_json(json,i)
+for i in 1..8
+  election = Election.create
+
+  if i > 1
+    json = JSON.parse(IO.read("doc/committee_raw/#{i}.json")) if i != 1
+    build_from_json(json,i)
+  end
 end
-
-
-

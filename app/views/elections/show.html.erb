@@ -1,0 +1,8 @@
+
+<div class="span12">
+  <h2> 第 <%= @election.id %> 屆 立法委員 </h2>
+  <%= div_for(@committees, :class => "span1 committee-box box") do |committee| %>
+    <%= render_committee_avatar(committee) %>
+    <%= link_to(committee.name, committee_path(committee)) %>
+  <% end %>
+</div>
