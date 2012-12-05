@@ -10,7 +10,8 @@
 
 * committees data : <https://github.com/ronnywang/TWLegislativeYuanData>
 * committees avatar : <http://blog.clkao.org/post/36666993341/api>
-* 
+* ly-gazette : <https://github.com/g0v/ly-gazette/blob/master/raw/index.md>
+
 ### Style Guides
 
 * [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
