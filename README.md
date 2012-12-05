@@ -4,6 +4,13 @@
 
 ![img](https://s3.amazonaws.com/files.droplr.com/files_production/acc_42891/lLfq?AWSAccessKeyId=AKIAJSVQN3Z4K7MT5U2A&Expires=1354732710&Signature=V4znGuaBx1i%2BMr3PuLLO1vTkB4A%3D&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27Screenshot%2B2012-12-06%2Bat%2B01.35.35.png)
 
+
+
+## Data source
+
+* committees data : <https://github.com/ronnywang/TWLegislativeYuanData>
+* committees avatar : <http://blog.clkao.org/post/36666993341/api>
+* 
 ### Style Guides
 
 * [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
