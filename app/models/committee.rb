@@ -5,4 +5,5 @@ class Committee < ActiveRecord::Base
   belongs_to :party_group
 
   has_many :election_committees
+  has_many :elections, :through => :election_committees
 end

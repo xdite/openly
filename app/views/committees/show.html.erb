@@ -1,0 +1,35 @@
+<div class="span12">
+  <h2> <%= @committee.name %></h2>
+
+  <div class="committee-info box">
+    <div class="committee-avatar group">
+      <%= render_committee_avatar(@committee, :medium ) %>
+    </div>
+
+    <br><br>
+
+    <table class="table table-striped table-bordered span6 ">
+      <tr>
+        <td width="100">政黨</td>
+        <td><%= @committee.party.name %> </td>
+      </tr>
+      <tr>
+        <td>黨團</td>
+        <td><%= @committee.party_group.name %> </td>
+      </tr>
+
+      <tr>
+        <td> 當選屆數</td>
+        <td>
+          <ul>
+            <%= content_tag_for(:li, @elections) do |election| %>
+              第 <%= election.id %> 屆
+            <% end %>
+
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</div>
