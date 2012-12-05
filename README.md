@@ -1,3 +1,7 @@
+## README
+
+1. `rake dev:build` # It will import all committees data from doc/committee_raw, 
+
 
 ### Style Guides
 
