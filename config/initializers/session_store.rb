@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Be sure to restart your server when you modify this file.
 
 Openly::Application.config.session_store :cookie_store, key: '_openly_session'
