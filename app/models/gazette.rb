@@ -10,14 +10,12 @@ class Gazette < ActiveRecord::Base
   end
 
   def update_from_local_data
-    begin
-      g = self
-      data = IO.read("#{Rails.root}/doc/ly-gazette/raw/#{ly_id}.md")
 
-      g.content = data
-      g.save
+    g = self
+    data = IO.read("#{Rails.root}/doc/ly-gazette/raw/#{ly_id}.md")
 
-    rescue
-    end
+    g.content = data
+    g.save
+
   end
 end

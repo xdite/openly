@@ -1,8 +1,16 @@
 <div class="span12">
-  <ul>
-   <%= content_tag_for(:li, @gazettes) do |gazette| %>
-   公報 No. <%= link_to(gazette.ly_id, gazette_path(gazette.ly_id) ) %> 
-   <% end %>
- </ul>
 
+  <table class="table table-borderd table-stripped">
+    <tr>
+
+     <%= content_tag_for(:tr, @gazettes) do |gazette| %>
+     <td width="100">
+       公報 No. <%= render_gazette_title(gazette) %> 
+     </td>
+     <td>
+        <%= render_gazette_status(gazette) %>
+     </td>
+     <% end %>
+   </tr>
+ </table>
 </div>

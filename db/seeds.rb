@@ -40,8 +40,13 @@ end
 for i in 3109..4012
   gazette = Gazette.find_or_create_by_ly_id(i)
 
-  gazette.update_from_local_data
-
+  begin
+    if Rais.env == "production"
+      gazette.fetch_content_from_github
+    else
+      gazette.update_from_local_data
+    end
+  rescue
+  end
   puts "#{gazette.id}"
 end
-
