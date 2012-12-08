@@ -1,0 +1,8 @@
+<div class="span12">
+  <%= simple_form_for @verbal_question, :url => admin_gazette_verbal_questions_path(@gazette), :html => { :method => :post } do |f| -%>
+    <%= f.input :content, :input_html => { :class => "input-xxlarge"} %>
+    <div class="form-actions">
+      <%= f.submit "Submit", :disable_with => 'Submiting...', :class => "btn pull-right" %>
+    </div>
+  <% end %>
+</div>
