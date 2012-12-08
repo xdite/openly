@@ -1,6 +1,8 @@
 class Gazette < ActiveRecord::Base
   # attr_accessible :title, :body
 
+  has_many :verbal_questions
+  
   scope :recent, :order => "id DESC"
   def fetch_content_from_github
     require 'open-uri'
