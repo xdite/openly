@@ -1,29 +1,26 @@
 # -*- encoding : utf-8 -*-
-default_environment["PATH"] = "/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin"
+require "./config/boot"
+require "bundler/capistrano"
 
-set :application, "openly"
-set :repository,  "git@github.com:xdite/#{application}.git"
-set :deploy_to, "/home/apps/#{application}"
+
+default_environment["RAILS_ENV"] = "production"
+default_environment["PATH"] = "/usr/local/bin:/usr/bin:/bin"
+
+set :application, "paperclip-io"
+set :repository,  "git@github.com:xdite/openly.git"
 
 set :branch, "master"
 set :scm, :git
-
 set :user, "apps"
-set :group, "apps"
-
 set :deploy_to, "/home/apps/#{application}"
 set :runner, "apps"
 set :deploy_via, :remote_cache
 set :git_shallow_clone, 1
 
-role :web, "rocodev.com"                          # Your HTTP server, Apache/etc
-role :app, "rocodev.com"                         # This may be the same as your `Web` server
-role :db,  "rocodev.com"   , :primary => true # This is where Rails migrations will run
 
-set :deploy_env, "production"
-set :rails_env, "production"
-set :scm_verbose, true
-set :use_sudo, false
+role :web, "rocodev.com"                          # Your HTTP server, Apache/etc
+role :app, "rocodev.com"                          # This may be the same as your `Web` server
+role :db,  "rocodev.com", :primary => true # This is where Rails migrations will run
 
 
 namespace :deploy do
@@ -42,7 +39,6 @@ namespace :my_tasks do
     
     symlink_hash = {
       "#{shared_path}/config/database.yml"   => "#{release_path}/config/database.yml",
-    #  "#{shared_path}/config/s3.yml"   => "#{release_path}/config/s3.yml",
       "#{shared_path}/uploads"              => "#{release_path}/public/uploads",
     }
 
@@ -63,4 +59,4 @@ namespace :remote_rake do
 end
 
 after "deploy:finalize_update", "my_tasks:symlink"
-
+#after "deploy:update_code", "delayed_job:restart"
