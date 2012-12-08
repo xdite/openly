@@ -2,6 +2,7 @@
 Openly::Application.routes.draw do
   devise_for :users
 
+  resources :gazettes
   resources :elections
   resources :committees
   

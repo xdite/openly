@@ -16,9 +16,9 @@ set :runner, "apps"
 set :deploy_via, :remote_cache
 set :git_shallow_clone, 1
 
-role :web, "openly.com"                          # Your HTTP server, Apache/etc
-role :app, "openly.com"                         # This may be the same as your `Web` server
-role :db,  "openly.com"   , :primary => true # This is where Rails migrations will run
+role :web, "rocodev.com"                          # Your HTTP server, Apache/etc
+role :app, "rocodev.com"                         # This may be the same as your `Web` server
+role :db,  "rocodev.com"   , :primary => true # This is where Rails migrations will run
 
 set :deploy_env, "production"
 set :rails_env, "production"

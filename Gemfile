@@ -37,6 +37,9 @@ gem "bootstrap_helper", ">= 2.1.2"
 gem "simple_form", "2.0.3"
 gem "will_paginate", "3.0.3"
 
+gem "redcarpet", "~> 2.0.0"
+gem "pygments.rb", '~> 0.2.4'
+
 gem "high_voltage"
 
 gem "airbrake"
