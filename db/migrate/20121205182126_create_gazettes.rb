@@ -5,6 +5,6 @@ class CreateGazettes < ActiveRecord::Migration
       t.integer :ly_id
       t.timestamps
     end
-    change_column :gazettes, :content, :text, :limit => 4294967295
+    #change_column :gazettes, :content, :text, :limit => 4294967295
   end
 end
