@@ -36,3 +36,12 @@ for i in 1..8
     build_from_json(json,i)
   end
 end
+
+for i in 3109..4012
+  gazette = Gazette.find_or_create_by_ly_id(i)
+
+  gazette.update_from_local_data
+
+  puts "#{gazette.id}"
+end
+

@@ -1,0 +1,8 @@
+<div class="span12">
+  <ul>
+   <%= content_tag_for(:li, @gazettes) do |gazette| %>
+   公報 No. <%= link_to(gazette.ly_id, gazette_path(gazette.ly_id) ) %> 
+   <% end %>
+ </ul>
+
+</div>

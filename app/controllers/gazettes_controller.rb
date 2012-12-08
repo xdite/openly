@@ -6,4 +6,8 @@ class GazettesController < ApplicationController
       @gazette.fetch_content_from_github
     end
   end
+
+  def index
+    @gazettes = Gazette.recent.paginate(:per_page => 20, :page => params[:page])
+  end
 end

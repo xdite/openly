@@ -1,4 +1,4 @@
-#require 'markdown'
+require 'markdown'
 module GazettesHelper
 
   def render_gazette_content(str,options = {})
