@@ -3,6 +3,10 @@ class Gazette < ActiveRecord::Base
 
   has_many :verbal_questions
   
+
+  def to_param
+    ly_id
+  end
   scope :recent, :order => "id DESC"
   def fetch_content_from_github
     require 'open-uri'

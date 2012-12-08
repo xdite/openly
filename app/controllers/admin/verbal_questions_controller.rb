@@ -16,11 +16,24 @@ class Admin::VerbalQuestionsController < ApplicationController
     end
   end
 
+  def edit
+    @verbal_question =  VerbalQuestion.find(params[:id])
+
+  end
+
+  def update
+    @verbal_question =  VerbalQuestion.find(params[:id])
+    if @verbal_question.update_attributes((params[:verbal_question]))
+      redirect_to gazette_path(@gazette.ly_id)
+    else
+      render :edit
+    end
+  end
 
   protected
 
   def find_gazette
-    @gazette = Gazette.find(params[:gazette_id])
+    @gazette = Gazette.find_by_ly_id(params[:gazette_id])
   end
 
 end
