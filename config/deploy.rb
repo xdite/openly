@@ -6,7 +6,7 @@ require "bundler/capistrano"
 default_environment["RAILS_ENV"] = "production"
 default_environment["PATH"] = "/usr/local/bin:/usr/bin:/bin"
 
-set :application, "paperclip-io"
+set :application, "openly"
 set :repository,  "git@github.com:xdite/openly.git"
 
 set :branch, "master"

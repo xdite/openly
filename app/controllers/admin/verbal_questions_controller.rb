@@ -1,5 +1,6 @@
 class Admin::VerbalQuestionsController < ApplicationController
 
+  before_filter :require_is_admin
   before_filter :find_gazette
 
   def new
