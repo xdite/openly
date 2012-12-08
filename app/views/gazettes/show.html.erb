@@ -1,11 +1,12 @@
 
 <div class="span9">
 
-  <%= raw render_gazette_content(@gazette.content) %>
+  <%= raw @gazette.to_html %>
 
 </div>
 
 <div class="span3">
+  <ul class="unstyled">
   <%= render :partial => "verbal_question", :collection =>  @verbal_questions, :as => :verbal_question %>
-
+</ul>
 </div>

@@ -1,0 +1,7 @@
+<div class="span12">
+
+  <h3> No. <%= @gazette.id %> 公報</h3>
+  <%= @verbal_question.involved_person_list.join(" / ") %>
+  <hr>
+  <%= raw @verbal_question.to_html %> 
+</div>

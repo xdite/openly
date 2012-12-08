@@ -1,0 +1,2 @@
+module VerbalQuestionsHelper
+end
