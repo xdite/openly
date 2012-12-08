@@ -18,7 +18,8 @@
               <%= render_list :class => "nav" do |li|
                 li << link_to("委員列表","/committees")
                 li << link_to("公報列表","/gazettes")
-                     end %>
+                li << link_to("口頭質詢", new_admin_gazette_verbal_question_path(@gazette)) if @gazette
+              end %>
               
               <%= render :partial => "common/user_nav"%>
 
