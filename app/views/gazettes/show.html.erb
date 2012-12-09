@@ -3,7 +3,7 @@
 
   <h2> <%= @gazette.ly_id %> 公報 </h2>
   <%# raw @gazette.to_html %>
-  公報地址 <%= link_to("Github 地址", "https://raw.github.com/g0v/ly-gazette/master/raw/#{@gazette.id}.md") %> （為節省資料庫負擔，請上 Github 觀看）
+  公報地址 <%= link_to("Github 地址", "https://raw.github.com/g0v/ly-gazette/master/raw/#{@gazette.ly_id}.md") %> （為節省資料庫負擔，請上 Github 觀看）
   <br><br>
   <ul class="unstyled">
     <%= render :partial => "verbal_question", :collection =>  @verbal_questions, :as => :verbal_question %>
