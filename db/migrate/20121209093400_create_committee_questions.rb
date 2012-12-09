@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateCommitteeQuestions < ActiveRecord::Migration
   def change
     create_table :committee_verbal_questions do |t|

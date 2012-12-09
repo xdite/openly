@@ -2,6 +2,11 @@
 
   <table class="table table-borderd table-stripped">
     <tr>
+      <td> 公報號碼 </td>
+      <td> 更新狀況 </td>
+      <td> 口頭質詢更新數 </td>
+    </tr>
+    <tr>
 
      <%= content_tag_for(:tr, @gazettes) do |gazette| %>
      <td width="100">
@@ -9,6 +14,10 @@
      </td>
      <td>
         <%= render_gazette_status(gazette) %>
+     </td>
+
+      <td>
+        <%= gazette.verbal_questions_count %>
      </td>
      <% end %>
    </tr>
