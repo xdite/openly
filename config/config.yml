@@ -16,3 +16,4 @@ test:
 
 production:
   <<: *defaults
+  domain: "http://openly.rocodev.com"    
