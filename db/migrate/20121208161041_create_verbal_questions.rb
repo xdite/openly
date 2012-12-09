@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateVerbalQuestions < ActiveRecord::Migration
   def change
     create_table :verbal_questions do |t|

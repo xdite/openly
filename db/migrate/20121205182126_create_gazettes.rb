@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateGazettes < ActiveRecord::Migration
   def change
     create_table :gazettes do |t|

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class VerbalQuestionsController < ApplicationController
   before_filter :find_gazette
 

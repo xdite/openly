@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class GazettesController < ApplicationController
   def show
     @gazette = Gazette.find_or_create_by_ly_id(params[:id])

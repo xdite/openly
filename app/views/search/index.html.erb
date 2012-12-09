@@ -1,0 +1,17 @@
+<div class="span12">
+  <table class="table table-borderd table-stripped">
+    <tr>
+
+     <%= content_tag_for(:tr, @gazettes) do |gazette| %>
+     <td width="100">
+       公報 No. <%= render_gazette_title(gazette) %> 
+     </td>
+     <td>
+        <%= render_gazette_status(gazette) %>
+     </td>
+     <% end %>
+   </tr>
+ </table>
+
+ <%= will_paginate(@gazettes)  %>
+</div>

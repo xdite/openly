@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 require 'test_helper'
 
-class VerbalQuestionsControllerTest < ActionController::TestCase
+class SearchControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

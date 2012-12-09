@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
 require 'test_helper'
 
-class GazettesHelperTest < ActionView::TestCase
+class SearchHelperTest < ActionView::TestCase
 end

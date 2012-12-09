@@ -14,6 +14,8 @@ Openly::Application.routes.draw do
   resources :elections
   resources :committees
 
+  match '/search' => "search#index", :as => "search"
+
   root :to => "elections#index"
 
 end

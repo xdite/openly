@@ -46,6 +46,9 @@ gem "turbo-sprockets-rails3"
 
 gem 'acts-as-taggable-on', '~> 2.3.1'
 
+
+gem "ransack"
+
 group :assets do
   gem "compass-rails"
 end
