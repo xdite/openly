@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121209093400) do
+ActiveRecord::Schema.define(:version => 20121209102326) do
 
   create_table "committee_verbal_questions", :force => true do |t|
     t.integer  "committee_id"
@@ -41,10 +41,11 @@ ActiveRecord::Schema.define(:version => 20121209093400) do
   end
 
   create_table "gazettes", :force => true do |t|
-    t.text     "content",    :limit => 2147483647
+    t.text     "content",                :limit => 2147483647
     t.integer  "ly_id"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
+    t.datetime "created_at",                                                  :null => false
+    t.datetime "updated_at",                                                  :null => false
+    t.integer  "verbal_questions_count",                       :default => 0
   end
 
   create_table "parties", :force => true do |t|
