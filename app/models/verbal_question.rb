@@ -15,7 +15,7 @@
 require 'markdown'
 class VerbalQuestion < ActiveRecord::Base
   # attr_accessible :title, :body
-  belongs_to :gazette
+  belongs_to :gazette, :counter_cache => true
   has_many :committee_verbal_questions
   has_many :committees, :through => :committee_verbal_questions
 
