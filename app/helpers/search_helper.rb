@@ -9,7 +9,7 @@ module SearchHelper
       return_string.concat(%Q|#{h(excerpt(text, token, :radius => 100)) }|)
     end
 
-    return return_string
+    return simple_format(return_string)
 
   end
 
