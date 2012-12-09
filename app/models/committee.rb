@@ -19,4 +19,8 @@ class Committee < ActiveRecord::Base
 
   has_many :election_committees
   has_many :elections, :through => :election_committees
+
+  has_many :committee_verbal_questions
+  has_many :verbal_questions, :through => :committee_verbal_questions
+
 end

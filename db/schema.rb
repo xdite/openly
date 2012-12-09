@@ -13,11 +13,11 @@
 
 ActiveRecord::Schema.define(:version => 20121209093400) do
 
-  create_table "committee_questions", :force => true do |t|
+  create_table "committee_verbal_questions", :force => true do |t|
     t.integer  "committee_id"
-    t.integer  "question_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.integer  "verbal_question_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "committees", :force => true do |t|

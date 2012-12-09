@@ -52,6 +52,8 @@ gem "ransack"
 # Cache
 gem "dalli"
 
+gem "sneaky-save"
+
 group :assets do
   gem "compass-rails"
 end
