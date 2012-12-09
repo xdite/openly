@@ -6,7 +6,10 @@ module SearchHelper
     text = text.gsub(/<.*?>/,"")
     return_string ||= ""
     tokens.each do |token|
-      return_string.concat(%Q|#{h(excerpt(text, token, :radius => 100)) }|)
+      excerpt_text = h(excerpt(text, token, :radius => 100)) 
+      replace_text = excerpt_text.gsub!(token, content_tag(:span, token, :class => "match"))
+
+      return_string.concat(%Q| "#{replace_text} |)
     end
 
     return simple_format(return_string)
