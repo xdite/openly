@@ -7,7 +7,7 @@
        公報 No. <%= render_gazette_title(gazette) %> 
      </td>
      <td>
-        <%= render_gazette_status(gazette) %>
+      <%= search_match_result(gazette.content,@query_string) %>
      </td>
      <% end %>
    </tr>
