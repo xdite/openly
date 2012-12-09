@@ -43,4 +43,31 @@ class Gazette < ActiveRecord::Base
     g.save
 
   end
+
+  include ActionView::Helpers::TextHelper
+  include ERB::Util
+
+  def excerpt_text_for_search(query_string)
+    text = content
+    
+    tokens = query_string.split(/[\\. ,+#-%^&*]/)
+    text = text.gsub(/<.*?>/,"")
+    return_string ||= ""
+    tokens.each do |token|
+      excerpt_text = h(excerpt(text, token, :radius => 100)) 
+      replace_text = excerpt_text.gsub!(token, content_tag(:span, token, :class => "match"))
+
+      return_string.concat(%Q| "#{replace_text} |)
+    end
+
+    return simple_format(return_string)
+  end
+
+  def excerpt_text_for_search_cache(query_string)
+    Rails.cache.fetch("gazette-#{id}-#{updated_at}-#{query_string}", :expires_in => 1.hours ) do
+      excerpt_text_for_search(query_string)
+    end
+  end
+
+
 end
