@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class SearchController < ApplicationController
-  #  caches_action :search,  :expires_in => 1.hours , :cache_path => Proc.new { |c| c.params }
+  caches_action :search,  :expires_in => 1.hours , :cache_path => Proc.new { |c| c.params }
 
   before_filter :validate_search_key
 
