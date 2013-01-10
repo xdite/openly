@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -42,7 +42,7 @@ gem "pygments.rb", '~> 0.2.4'
 gem "high_voltage"
 
 gem "airbrake"
-gem "turbo-sprockets-rails3"
+# gem "turbo-sprockets-rails3"
 
 gem 'acts-as-taggable-on', '~> 2.3.1'
 
